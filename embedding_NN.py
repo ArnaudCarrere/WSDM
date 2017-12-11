@@ -8,6 +8,7 @@ from keras.layers import Dense, Activation, Merge, Reshape, Dropout
 from keras.layers.embeddings import Embedding
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import train_test_split
+from data_processing import process_data
 
 #random seeds for stochastic parts of neural network 
 np.random.seed(10)

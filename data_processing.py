@@ -10,8 +10,8 @@ def process_data():
 	print("Loading and processing data ...")
 
 	# Load Train and Train_2
-	train = pd.read_csv('train.csv')
-	train_2 = pd.read_csv('train_v2.csv')
+	train = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/train.csv')
+	train_2 = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/train_v2.csv')
 
 	#Concatenate train and train_v2
 	train= pd.concat((train, train_2), axis=0, ignore_index=True).reset_index(drop=True)
@@ -19,7 +19,7 @@ def process_data():
 	train['is_churn'] = train['is_churn'].astype(np.int8)
 
 	# Merge with members data
-	members = pd.read_csv('members_v3.csv')
+	members = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/members_v3.csv')
 
 	#Reducing the size int64 --> int 8
 	members['city'] = members['city'].astype(np.int8)
@@ -48,9 +48,9 @@ def process_data():
 	df_train = df_train.fillna(0)
 
 	# Merge with transactions
-	transactions = pd.read_csv('transactions.csv')
+	transactions = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/transactions.csv')
 	print("Transactions read")
-	transactions_2 = pd.read_csv('transactions_v2.csv')
+	transactions_2 = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/transactions_v2.csv')
 	print("Transaction_2 read")
 	df_transactions = pd.concat((transactions, transactions_2), axis=0, ignore_index=True).reset_index(drop=True)
 	transactions_2 = []
@@ -90,8 +90,8 @@ def process_data():
 
 	# Merge with users_logs
 	#df_train = pd.merge(df_train, user_logs, how='left', on='msno')
-	user_logs_2 = pd.read_csv('user_logs_v2.csv')
-	print("User_logs_2 read")
+	user_logs_2 = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/user_logs_v2.csv')
+	print("D:/Kaggle Data/MMBOX Churn/churn/User_logs_2 read")
 
 	user_logs_2.info()
 	user_logs_2.head()

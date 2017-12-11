@@ -7,14 +7,14 @@ from datetime import datetime
 from collections import Counter
 
 
-train = pd.read_csv('train.csv')
-train_2 = pd.read_csv('train_v2.csv')
-test_2 = pd.read_csv('sample_submission_v2.csv')
-transactions = pd.read_csv('transactions.csv')
-transactions_2 = pd.read_csv('transactions_v2.csv')
-members_3 = pd.read_csv('members_v3.csv')
-user_logs_2 = pd.read_csv('user_logs_v2.csv')
-user_logs = pd.read_csv('user_logs.csv')
+train = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/train.csv')
+train_2 = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/train_v2.csv')
+test_2 = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/sample_submission_v2.csv')
+transactions = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/transactions.csv')
+transactions_2 = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/transactions_v2.csv')
+members_3 = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/members_v3.csv')
+user_logs_2 = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/user_logs_v2.csv')
+user_logs = pd.read_csv('D:/Kaggle Data/MMBOX Churn/churn/user_logs.csv')
 
 print("=========== Train ===========")
 print(train.head())
